@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Println("Digite um numero de elementos: ")
+	fmt.Scan(&n)
+	fmt.Println("Digite os elementos da primeira array: ")
+	array := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&array[i])
+	}
+	fmt.Println("Digite os elementos da segunda array: ")
+	array1 := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&array1[i])
+	}
+	array2 := make([]int, n)
+	for i := 0; i < n; i++ {
+		array2[i] = array[i] + array1[i]
+	}
+	fmt.Println("Sua array é: ", array2)
+}
