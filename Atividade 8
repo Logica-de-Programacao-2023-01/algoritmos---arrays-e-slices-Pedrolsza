@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	slice := []string{"Oi", "ola", "eae", "bao", "se", "liga", "Tchau", "opa"}
+	fmt.Println("a slice é:", slice)
+	fmt.Println(slice)
+	var v string
+	fmt.Println("Informe um valor: ")
+	fmt.Scan(&v)
+	nv := []string{}
+	for _, x := range slice {
+		if x != v {
+			nv = append(nv, x)
+		}
+	}
+	fmt.Println(nv)
+
+}
