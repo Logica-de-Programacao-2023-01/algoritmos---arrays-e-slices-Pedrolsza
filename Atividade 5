@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	matriz := [3][2]int{}
+	for linha := 0; linha < 3; linha++ {
+		for coluna := 0; coluna < 2; coluna++ {
+			fmt.Printf("Informe o valor da posição (%d,%d): ", linha, coluna)
+			fmt.Scan(&matriz[linha][coluna])
+		}
+	}
+	fmt.Println("Matriz resultante:")
+	for i := 0; i < 3; i++ {
+		for x := 0; x < 2; x++ {
+			fmt.Printf("%d ", matriz[i][x])
+		}
+		fmt.Println()
+	}
+}
