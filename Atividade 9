@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [6]float64{3.2, 3.3, 3.4, 1.2, 5.6, 6.4}
+	var num float64
+	fmt.Println("digite seu numero:")
+	fmt.Scan(&num)
+
+	for i := 0; i < len(array); i++ {
+		array[i] += num
+	}
+	fmt.Println(array)
+}
