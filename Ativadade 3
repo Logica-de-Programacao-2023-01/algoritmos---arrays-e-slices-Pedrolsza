@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+	num := [4]float64{1.2, 2.2, 3.3, 4.2}
+	produto := 1.0
+	for _, valor := range num {
+		produto *= valor
+	}
+	fmt.Printf("o produto dos valores armazenados é: %.3f", produto)
+}
