@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	var num, num1 int
+	fmt.Println("escreva um numero: ")
+	fmt.Println("escreva outro numero: ")
+	fmt.Scan(&num)
+	fmt.Scan(&num1)
+	slice[num], slice[num1] = slice[num1], slice[num]
+	fmt.Println("Sua nova slice é: ", slice)
+}
