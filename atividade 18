@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Print("Digite um número inteiro positivo: ")
+	fmt.Scan(&n)
+	primos := []int{}
+	num := 2
+	for len(primos) < n {
+		ehPrimo := true
+		for _, primo := range primos {
+			if num%primo == 0 {
+				ehPrimo = false
+				break
+			}
+		}
+		if ehPrimo {
+			primos = append(primos, num)
+		}
+		num++
+	}
+	fmt.Println(primos)
+}
