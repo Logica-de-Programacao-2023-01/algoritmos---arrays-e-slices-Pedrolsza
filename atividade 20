@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [5]int{1, 2, 1, 4, 5}
+	crescente := true
+	for i := 1; i < len(array); i++ {
+		atual := array[i]
+		anterior := array[i-1]
+		if anterior >= atual {
+			crescente = false
+			break
+		}
+	}
+	if crescente {
+		fmt.Println("Ele está em ordem crescente")
+	} else {
+		fmt.Println("Não está em ordem crescente")
+	}
+}
